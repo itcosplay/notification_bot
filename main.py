@@ -23,8 +23,8 @@ def main():
     env.read_env()
 
     devman_token = os.environ['DEVMAN_TOKEN']
-    bot_token = os.environ['BOT_TOKEN']
-    chat_id = os.environ['CHAT_ID']
+    bot_token = os.environ['TG_BOT_TOKEN']
+    chat_id = os.environ['TG_CHAT_ID']
 
     bot = telegram.Bot(token=bot_token)
 
