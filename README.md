@@ -9,15 +9,15 @@
 
 ## Необходимое окружение
 * токен [dvmn](https://dvmn.org/api/docs) `DEVMAN_TOKEN`
-* токен вашего телеграм бота `BOT_TOKEN`
-* id вашего чата с ботом `CHAT_ID`
+* токен вашего телеграм бота `TG_BOT_TOKEN`
+* id вашего чата с ботом `TG_CHAT_ID`
 Все переменные лежат в файле .env в корневом каталоге
 ```
 DEVMAN_TOKEN=here_must_be_your_token
 
-BOT_TOKEN=here_must_be_your_token
+TG_BOT_TOKEN=here_must_be_your_token
 
-CHAT_ID=here_must_be_your_chat_id
+TG_CHAT_ID=here_must_be_your_chat_id
 ```
 
 
