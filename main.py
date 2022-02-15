@@ -62,7 +62,7 @@ def main():
                 lesson_title = new_attempt['lesson_title']
                 message = 'У вас проверили работу'
                 message += f' {lesson_title}\n\n{success_msg}'
-                logger.info(message)
+                bot.send_message(chat_id, message)
 
                 payload = {
                     'timestamp': check_info['last_attempt_timestamp']
