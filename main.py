@@ -67,18 +67,18 @@ def main():
                 payload = {
                     'timestamp': check_info['last_attempt_timestamp']
                 }
-        
+           
         except requests.exceptions.ReadTimeout as error:
-            logger.error(error, exc_info=True)
+            logger.exception(error)
             continue
 
         except ConnectionError as error:
-            logger.error(error, exc_info=True)
+            logger.exception(error)
             time.sleep(5)
             continue
 
         except Exception as error:
-            logger.error(error, exc_info=True)
+            logger.exception(error)
             time.sleep(5)
 
 
