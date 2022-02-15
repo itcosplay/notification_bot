@@ -60,7 +60,8 @@ def main():
                 }
                 success_msg = conclusion_msg[new_attempt['is_negative']]
                 lesson_title = new_attempt['lesson_title']
-                message = f'У вас проверили работу {lesson_title}\n\n{success_msg}'
+                message = 'У вас проверили работу'
+                message += f' {lesson_title}\n\n{success_msg}'
                 logger.info(message)
 
                 payload = {
