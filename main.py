@@ -7,6 +7,9 @@ import telegram
 from environs import Env
 
 
+logger = logging.getLogger(__file__)
+
+
 class TelegramLogsHandler(logging.Handler):
     def __init__(self, tg_bot, chat_id):
         super().__init__()
@@ -28,7 +31,6 @@ def main():
 
     bot = telegram.Bot(token=bot_token)
 
-    logger = logging.getLogger(__file__)
     logger.setLevel(logging.INFO)
     logger.addHandler(TelegramLogsHandler(bot, chat_id))
 
@@ -67,7 +69,7 @@ def main():
                 payload = {
                     'timestamp': check_info['last_attempt_timestamp']
                 }
-           
+
         except requests.exceptions.ReadTimeout as error:
             logger.exception(error)
             continue
@@ -84,19 +86,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
